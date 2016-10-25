@@ -1,0 +1,16 @@
+#a1{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: red;
+    z-index: 5;
+}
+
+#a2{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 300px;
+    background: green;
+    z-index: 2;
+}
