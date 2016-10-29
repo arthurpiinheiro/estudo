@@ -7,3 +7,7 @@
 .container{
 	padding-top: 50px;
 }
+
+#mensagem{
+  display: none;
+}
