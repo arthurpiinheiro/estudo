@@ -9,6 +9,7 @@ function Usuario(){
       url: 'src/php/user/login.php',
       data: formData
     }).done(function(result){
+      console.log(result);
       if (!result.login){
         mensagem("alert-danger", 'Usuário ou senha inválidos!!');
       }
@@ -22,7 +23,28 @@ function Usuario(){
   }
 
   this.sessao = function(){
+    $.ajax({
+      method:'POST',
+      url: 'src/php/user/session.php'
+    }).done(function(result){
+      if (!result.session) {
+        window.location.href = "login.html";
+      }
+      else{
+        $('#index').fadeIn();
+      }
+    });
+  }
 
+  this.logout = function(){
+    $.ajax({
+      method:'GET',
+      url: 'src/php/user/logout.php?session=logout'
+    }).done(function(result){
+      if (result.logout) {
+        window.location.href = "login.html";
+      }
+    });
   }
 
   function mensagem(classe, mensagem){

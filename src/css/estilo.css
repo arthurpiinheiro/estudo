@@ -8,6 +8,10 @@
 	padding-top: 50px;
 }
 
+#index{
+  display: none;
+}
+
 #mensagem{
   display: none;
 }

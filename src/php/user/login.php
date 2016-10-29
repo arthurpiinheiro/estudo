@@ -15,6 +15,7 @@
 
     if ($result) {
       session_start();
+      $_SESSION['codigo'] = $result[0]['cod'];
       $_SESSION['usuario'] = $result[0]['nome'];
       $_SESSION['email'] = $result[0]['email'];
 

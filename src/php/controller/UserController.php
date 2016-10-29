@@ -2,8 +2,16 @@
 	include_once "../model/User.class.php";
 
 	class UserController extends User{
+    private $cod;
     private $email;
     private $senha;
+
+    public function setCodigo($codigo){
+      $this->codigo = $codigo;
+    }
+    private function getCodigo(){
+      return $this->codigo;
+    }
 
     public function setEmail($email){
       $this->email = $email;
@@ -25,6 +33,14 @@
 
     public function retornoLogin(){
       return $this->login();
+    }
+
+    protected function sessao(){
+      return $this->bdSessao($this->getCodigo(), $this->getEmail());
+    }
+
+    public function retornoSessao(){
+      return $this->sessao();
     }
 	}
 ?>
