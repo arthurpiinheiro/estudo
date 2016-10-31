@@ -9,11 +9,12 @@ function Usuario(){
       url: 'src/php/user/login.php',
       data: formData
     }).done(function(result){
-      console.log(result);
       if (!result.login){
         mensagem("alert-danger", 'Usuário ou senha inválidos!!');
+        $('#senha').val("");
       }
       else {
+        $('#email, #senha').attr('disabled', 'disabled');
         mensagem("alert-success", 'Logado com sucesso!!');
         setTimeout(function(){
           window.location.href = "index.html";
@@ -58,5 +59,17 @@ function Usuario(){
         $('#mensagem').removeClass(classe);
       }, 1000);
     }, 1000);
+  }
+}
+
+function Post(){
+
+  this.listar = function(){
+    $.ajax({
+      method:'GET',
+      url: 'src/php/post/listar.php'
+    }).done(function(result){
+      console.log(result);
+    });
   }
 }
