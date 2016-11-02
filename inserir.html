@@ -44,7 +44,7 @@
 	<div class="container">
 		<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
 			<h3 class="page-header text-center">Escrever Publicação</h3>
-			<form id="post">
+			<form id="inserirPost" enctype="multipart/form-data">
 				<div class="form-group">
 					<div class="row">
 						<div class="col-lg-12">
@@ -61,7 +61,7 @@
 						<div class="col-lg-12">
 							<div class="form-group">
 								<label for="titulo">Titulo</label>
-								<input type="text" id="titulo" name="titulo" class="form-control" required/>
+								<input type="text" id="titulo" name="titulo" class="form-control" required=""/>
 							</div>
 						</div>
 					</div>
@@ -71,7 +71,7 @@
 						<div class="col-lg-12">
 							<div class="form-group">
 								<label for="descricao">Descrição</label>
-								<textarea id="descricao" name="descricao" class="form-control" required></textarea>
+								<textarea id="descricao" name="descricao" class="form-control" required=""></textarea>
 							</div>
 						</div>
 					</div>
@@ -79,15 +79,21 @@
 
 				<div class="form-group">
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-lg-12 text-right">
 							<div class="form-group">
+                <button class="btn btn-default">Limpar</button>
 								<button class="btn btn-success">Enviar</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</form>
+      <div id="mensagem" class="alert  alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong></strong>
+      </div>
 		</div>
+
 	</div>
 
 	<script src="src/js/jquery/jquery-1.11.0.min.js"></script>

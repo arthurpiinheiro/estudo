@@ -7,6 +7,6 @@
     echo json_encode(['logout' => true]);
   }
   else{
-    echo json_encode(['logout' => false]);
+    die("Acesso Negado");
   }
 ?>

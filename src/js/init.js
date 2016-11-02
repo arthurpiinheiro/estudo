@@ -2,6 +2,11 @@ var usuario = new Usuario();
 var post = new Post();
 var pathname = $(location).attr('pathname');
 var formLogin = $('#formLogin');
+var formInserirPost = $('#inserirPost');
+
+// $('#inserirPost').submit(function(){
+//     console.log('foi');
+// });
 
 var url = [
   '/estudo/',
@@ -13,6 +18,10 @@ var url = [
 	$(function(){
     formLogin.submit(function(els){
         usuario.login(els);
+    });
+
+    formInserirPost.submit(function(els){
+        post.inserir(els);
     });
 
     for(var i=0; i < url.length; i++){

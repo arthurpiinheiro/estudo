@@ -6,6 +6,7 @@
      private $descricao;
      private $data;
      private $codUsuario;
+     private $imagem;
 
      public function setTitulo($titulo){
        $this->titulo = $titulo;
@@ -39,12 +40,28 @@
        return $this->codUsuario;
      }
 
-     protected function publicacoes(){
-       return $this->bdPublicacoes();
+     public function setImagem($imagem){
+       $this->imagem = $imagem;
      }
 
-     public function retornoPublicacao(){
-       return $this->publicacoes();
+     private function getImagem(){
+       return $this->imagem;
+     }
+
+     protected function listarPublicacao(){
+       return $this->bdListar();
+     }
+
+     public function retornoListarPublicacao(){
+       return $this->listarPublicacao();
+     }
+
+     protected function inserirPublicacao(){
+       return $this->bdInserir($this->getTitulo(), $this->getDescricao(), $this->getData(), $this->getCodUsuario(), $this->getImagem());
+     }
+
+     public function retornoInserirPublicacao(){
+       return $this->inserirPublicacao();
      }
 	}
  ?>

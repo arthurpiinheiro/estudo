@@ -1,7 +1,6 @@
 <?php
   header('Content-type: application/json');
   session_start();
-
   if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['codigo']) && isset($_SESSION['email'])){
 
     $codigo = $_SESSION['codigo'];
