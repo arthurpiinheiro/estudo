@@ -56,12 +56,34 @@ function Post(){
       url: 'src/php/post/listar.php'
     }).done(function(result){
       console.log(result);
-      console.log('foi');
+      if (result.length <= 0) {
+        console.log('Você não possui publicações');
+      }
+      else {
+        $('.posts > div').length > 0 ? $('.posts > div').remove() : null;
+
+        for (var i = 0; i < result.posts.length; i++) {
+          $('.posts').append('<div/> <div/>');
+          $('.posts > div').eq(i).addClass('panel panel-default');
+          $('.posts > div').eq(i).append('<div/> <div/>');
+          $('.posts > div:nth-child('+i+') > div:nth-child(1)').addClass('panel-heading');
+          $('.posts > div:nth-child('+i+') > div:nth-child(1)').append('<div/>');
+          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div').addClass('row');
+          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div').append('<div/> <div/>');
+          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div').addClass('col-lg-6 col-md-6');
+          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(1)').text(result.posts[i].titulo);
+          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(2)').append('<div/>');
+          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(2) > div').addClass('text-right');
+          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(2) > div').append('<button onclick=editar('+result.posts[i].cod+') class="btn btn-primary">Editar<button/>');
+          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(2) > div').append('<button onclick=apagar('+result.posts[i].cod+') class="btn btn-danger">Apagar<button/>');
+          $('.posts > div:nth-child('+i+') > div:nth-child(2)').addClass('panel-body');
+          $('.posts > div:nth-child('+i+') > div:nth-child(2)').text(result.posts[i].descricao);
+        }
+      }
     });
   }
 
   this.inserir = function(form){
-
     form.preventDefault();
     var formData = new FormData($("#inserirPost")[0]);
 
@@ -74,7 +96,24 @@ function Post(){
     }).done(function(result){
       if (!result.erro) {
         mensagem("alert-success", 'Post cadastrado com sucesso!!', 2500);
-        $('#titulo, #descricao').val("");
+        $('#imagem, #titulo, #descricao').val("");
+      }
+      else {
+        mensagem("alert-danger", result.mensagem, 2500);
+      }
+    });
+  }
+
+  this.apagar = function(cod){
+    $.ajax({
+      method:'POST',
+      url: 'src/php/post/apagar.php',
+      data: 'codigo='+cod
+    }).done(function(result){
+      console.log(result);
+      if (!result.erro) {
+        mensagem("alert-success", 'Post deletado com sucesso!!', 2500);
+        post.listar();
       }
       else {
         mensagem("alert-danger", result.mensagem, 2500);
@@ -85,11 +124,11 @@ function Post(){
 
 function mensagem(classe, mensagem, tempo){
   $('#mensagem').addClass(classe);
-  $("#mensagem").fadeIn();
-  $('#mensagem > strong').text(mensagem);
+  $("#mensagem, .navMensagem").fadeIn();
+  $('#mensagem > strong, #mensagem > div > div > strong').text(mensagem);
 
   setTimeout(function(){
-    $("#mensagem").fadeOut();
+    $("#mensagem, .navMensagem").fadeOut();
     setTimeout(function(){
       $('#mensagem').removeClass(classe);
     }, 1000);

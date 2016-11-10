@@ -15,5 +15,11 @@
        $insert = $this->prepare($sql);
        return $insert->execute();
      }
+
+     protected function bdApagar($cod){
+       $sql = "DELETE FROM `post` WHERE `post`.`cod` = ".$cod."";
+       $insert = $this->prepare($sql);
+       return $insert->execute();
+     }
 	}
  ?>

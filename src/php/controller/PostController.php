@@ -6,6 +6,7 @@
      private $descricao;
      private $data;
      private $codUsuario;
+     private $codPost;
      private $imagem;
 
      public function setTitulo($titulo){
@@ -48,6 +49,14 @@
        return $this->imagem;
      }
 
+     public function setCodPost($codPost){
+       $this->codPost = $codPost;
+     }
+
+     private function getCodPost(){
+       return $this->codPost;
+     }
+
      protected function listarPublicacao(){
        return $this->bdListar();
      }
@@ -63,5 +72,13 @@
      public function retornoInserirPublicacao(){
        return $this->inserirPublicacao();
      }
+
+     protected function apagarPublicacao(){
+       return $this->bdApagar($this->getCodPost());
+     }
+
+      public function retornoApagarPublicacao(){
+        return $this->apagarPublicacao();
+      }
 	}
  ?>

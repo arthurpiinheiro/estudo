@@ -2,7 +2,6 @@
   header("Content-type: application/json");
   session_start();
   if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['codigo']) && isset($_SESSION['email'])){
-
     $titulo = trim(strip_tags(addslashes(filter_input(INPUT_POST, 'titulo'))));
     $descricao = trim(strip_tags(addslashes(filter_input(INPUT_POST, 'descricao'))));
     $data = date("Y-m-d H:s:i");
@@ -18,7 +17,7 @@
     $extensoes = ['jpg', 'png', 'jpeg'];
     $tamanhoMaximo = 1024 * 1024 * 1.8;
 
-    if (!$_FILES['imagem']) {
+    if ($_FILES['imagem']['size'] <= 0) {
       echo json_encode(['erro' => true, 'mensagem' => 'Envia uma imagem']);
     }
     elseif (!in_array($extensao, $extensoes)) {

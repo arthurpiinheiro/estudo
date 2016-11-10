@@ -14,4 +14,11 @@
 
 #mensagem{
   display: none;
+  height: 50px;
+}
+
+.navMensagem{
+  display: none;
+  padding: 5px 0px;
+  height: 60px;
 }

@@ -4,10 +4,6 @@ var pathname = $(location).attr('pathname');
 var formLogin = $('#formLogin');
 var formInserirPost = $('#inserirPost');
 
-// $('#inserirPost').submit(function(){
-//     console.log('foi');
-// });
-
 var url = [
   '/estudo/',
   '/estudo/index.html',
@@ -38,4 +34,12 @@ var url = [
       usuario.logout();
     });
 	});
+
 })(jQuery);
+
+function editar(valor){
+}
+
+function apagar(valor){
+  post.apagar(valor);
+}
