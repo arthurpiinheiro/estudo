@@ -3,8 +3,11 @@
 
 	class Post extends Conexao{
 
-     protected function bdPublicacoes(){
-       return true;
+     protected function bdListar(){
+       $sql = "SELECT * FROM post";
+       $insert = $this->prepare($sql);
+       $insert->execute();
+       return $insert->fetchAll();
      }
 
      protected function bdInserir($titulo, $descricao, $data, $codUsuario){

@@ -56,6 +56,7 @@ function Post(){
       url: 'src/php/post/listar.php'
     }).done(function(result){
       console.log(result);
+      console.log('foi');
     });
   }
 
