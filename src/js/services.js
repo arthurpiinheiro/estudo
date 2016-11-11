@@ -110,7 +110,6 @@ function Post(){
       url: 'src/php/post/apagar.php',
       data: 'codigo='+cod
     }).done(function(result){
-      console.log(result);
       if (!result.erro) {
         mensagem("alert-success", 'Post deletado com sucesso!!', 2500);
         post.listar();
