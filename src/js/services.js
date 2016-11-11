@@ -55,29 +55,29 @@ function Post(){
       method:'GET',
       url: 'src/php/post/listar.php'
     }).done(function(result){
-      console.log(result);
-      if (result.length <= 0) {
-        console.log('Você não possui publicações');
+      if (!result.posts) {
+        $('.posts').append('<div/>').addClass('text-center').text('Você não possui publicações');
       }
       else {
         $('.posts > div').length > 0 ? $('.posts > div').remove() : null;
 
         for (var i = 0; i < result.posts.length; i++) {
-          $('.posts').append('<div/> <div/>');
+          var a = i+1;
+          $('.posts').append('<div/>');
           $('.posts > div').eq(i).addClass('panel panel-default');
           $('.posts > div').eq(i).append('<div/> <div/>');
-          $('.posts > div:nth-child('+i+') > div:nth-child(1)').addClass('panel-heading');
-          $('.posts > div:nth-child('+i+') > div:nth-child(1)').append('<div/>');
-          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div').addClass('row');
-          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div').append('<div/> <div/>');
-          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div').addClass('col-lg-6 col-md-6');
-          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(1)').text(result.posts[i].titulo);
-          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(2)').append('<div/>');
-          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(2) > div').addClass('text-right');
-          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(2) > div').append('<button onclick=editar('+result.posts[i].cod+') class="btn btn-primary">Editar<button/>');
-          $('.posts > div:nth-child('+i+') > div:nth-child(1) > div > div:nth-child(2) > div').append('<button onclick=apagar('+result.posts[i].cod+') class="btn btn-danger">Apagar<button/>');
-          $('.posts > div:nth-child('+i+') > div:nth-child(2)').addClass('panel-body');
-          $('.posts > div:nth-child('+i+') > div:nth-child(2)').text(result.posts[i].descricao);
+          $('.posts > div:nth-child('+a+') > div:nth-child(1)').addClass('panel-heading');
+          $('.posts > div:nth-child('+a+') > div:nth-child(2)').addClass('panel-body');
+          $('.posts > div:nth-child('+a+') > div.panel-heading').append('<div/>');
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div').addClass('row');
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div.row').append('<div/> <div/>');
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div').addClass('col-lg-6 col-md-6');
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(1)').text(result.posts[i].titulo);
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2)').append('<div/>');
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2) > div').addClass('text-right');
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2) > div').append('<button onclick=editar('+result.posts[i].cod+') class="btn btn-primary">Editar<button/>');
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2) > div').append('<button onclick=apagar('+result.posts[i].cod+') class="btn btn-danger">Apagar<button/>');
+          $('.posts > div:nth-child('+a+') > div:nth-child(2)').text(result.posts[i].descricao);
         }
       }
     });

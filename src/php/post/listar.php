@@ -11,7 +11,7 @@
       echo json_encode(['posts' => $result]);
     }
     else{
-      echo json_encode(['retorno' =>false]);
+      echo json_encode(['posts' => false]);
     }
   }
   else{
