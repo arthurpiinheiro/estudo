@@ -24,7 +24,7 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
 		        <li><a href="./">Publicações <span class="sr-only">(current)</span></a></li>
-		        <li class="active"><a href="#">Inserir <span class="sr-only">(current)</span></a></li>
+		        <li><a href="inserir">Inserir <span class="sr-only">(current)</span></a></li>
 		      </ul>
   		      <ul class="nav navbar-nav navbar-right">
 		        <li class="dropdown">
@@ -42,18 +42,27 @@
 	</header>
 
 	<div class="container">
+    <div class="lightbox">
+      <div>
+        <img src="src/img/loading.svg" class="loading" alt="" />
+        <img src="src/img/user.png" class="imgLightbox" alt="" />
+        <button type="button" class="btn btn-default close-lightbox" name="button"><span class="glyphicon glyphicon-remove"></span></button>
+      </div>
+    </div>
 		<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
-			<h3 class="page-header text-center">Escrever Publicação</h3>
+			<h3 class="page-header text-center">Titulo Publicação</h3>
 			<form id="inserirPost" enctype="multipart/form-data">
 				<div class="form-group">
 					<div class="row">
-						<div class="col-lg-12">
-							<label for="imagem">Imagem</label>
-						</div>
-						<div class="col-lg-12">
-              <label for="imagem" class="btn btn-default">Imagem</label>
-							<input type="file" id="imagem" name="imagem"  class="hidden"/>
-						</div>
+            <div class="col-lg-12">
+              <div class="edit-photo">
+                <div class="thumbnail">
+                  <img id="imagemAtual" src="src/img/user.png" alt="" />
+                </div>
+                <label for="imagem" class="btn btn-default disabled"><span class="glyphicon glyphicon-camera"></span></label>
+                <input type="file" id="imagem" name="imagem" disabled class="hidden"/>
+              </div>
+            </div>
 					</div>
 				</div>
 				<div class="form-group">
@@ -61,7 +70,7 @@
 						<div class="col-lg-12">
 							<div class="form-group">
 								<label for="titulo">Titulo</label>
-								<input type="text" id="titulo" name="titulo" class="form-control" required=""/>
+								<input type="text" id="titulo" name="titulo" class="form-control" disabled required=""/>
 							</div>
 						</div>
 					</div>
@@ -71,7 +80,7 @@
 						<div class="col-lg-12">
 							<div class="form-group">
 								<label for="descricao">Descrição</label>
-								<textarea id="descricao" name="descricao" class="form-control" required=""></textarea>
+								<textarea id="descricao" name="descricao" class="form-control" disabled required=""></textarea>
 							</div>
 						</div>
 					</div>
@@ -81,8 +90,8 @@
 					<div class="row">
 						<div class="col-lg-12 text-right">
 							<div class="form-group">
-                <input type="reset" class="btn btn-default" value="Limpar">
-                <input type="submit" class="btn btn-success" value="Enviar">
+                <button class="btn btn-default disabled">Limpar</button>
+								<button class="btn btn-success disabled">Enviar</button>
 							</div>
 						</div>
 					</div>
@@ -93,12 +102,12 @@
         <strong></strong>
       </div>
 		</div>
-
 	</div>
 
 	<script src="src/js/jquery/jquery-1.11.0.min.js"></script>
 	<script src="src/js/bootstrap/bootstrap.min.js"></script>
 	<script src="src/js/services.js"></script>
   <script src="src/js/init.js"></script>
+  <script src="src/js/main.js"></script>
 </body>
 </html>

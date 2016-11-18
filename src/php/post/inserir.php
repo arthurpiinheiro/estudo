@@ -18,7 +18,7 @@
     $tamanhoMaximo = 1024 * 1024 * 1.8;
 
     if ($_FILES['imagem']['size'] <= 0) {
-      echo json_encode(['erro' => true, 'mensagem' => 'Envia uma imagem']);
+      echo json_encode(['erro' => true, 'mensagem' => 'Envie uma imagem']);
     }
     elseif (!in_array($extensao, $extensoes)) {
       echo json_encode(['erro' => true, 'mensagem' => 'Só é permitido imagens com as seguintes extensões: JPG, JPEG, PNG.']);
@@ -38,7 +38,7 @@
 
       if ($result) {
         if (move_uploaded_file($imagem['tmp_name'], $dir.$nomeImagem)){
-          echo json_encode(['erro' => false]);
+          echo json_encode(['erro' => false, 'mensagem' => 'Post cadastrado com sucesso!!']);
         }
         else{
           echo json_encode(['erro' => true, 'mensagem' => 'Erro ao mover a imagem para o servidor.']);

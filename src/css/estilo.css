@@ -22,3 +22,63 @@
   padding: 5px 0px;
   height: 60px;
 }
+
+.edit-photo{
+  position: relative;
+}
+.edit-photo > div{
+  width: 150px;
+}
+
+.edit-photo > div > img{
+  width: 100%;
+}
+
+.edit-photo > label{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.lightbox{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+}
+
+.lightbox > div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img.loading{
+  width: 30px;
+}
+
+.lightbox .close-lightbox{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.thumbnail{
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.thumbnail:hover{
+    opacity: 0.7;
+}
+
+.imgLightbox{
+  display: none;
+  width: 70%;
+}

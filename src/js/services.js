@@ -17,7 +17,7 @@ function Usuario(){
         $('#email, #senha').attr('disabled', 'disabled');
         mensagem("alert-success", 'Logado com sucesso!!', 1000);
         setTimeout(function(){
-          window.location.href = "index.html";
+          window.location.href = "./";
         }, 1000);
       }
     });
@@ -29,7 +29,7 @@ function Usuario(){
       url: 'src/php/user/session.php'
     }).done(function(result){
       if (!result.session) {
-        window.location.href = "login.html";
+        window.location.href = "login";
       }
       else{
         $('#index').fadeIn();
@@ -43,7 +43,7 @@ function Usuario(){
       url: 'src/php/user/logout.php?session=logout'
     }).done(function(result){
       if (result.logout) {
-        window.location.href = "login.html";
+        window.location.href = "login";
       }
     });
   }
@@ -75,7 +75,7 @@ function Post(){
           $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(1)').text(result.posts[i].titulo);
           $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2)').append('<div/>');
           $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2) > div').addClass('text-right');
-          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2) > div').append('<button onclick=editar('+result.posts[i].cod+') class="btn btn-primary">Editar<button/>');
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2) > div').append('<a href="editar?id='+result.posts[i].cod+'"><button class="btn btn-primary">Editar<button/></a>');
           $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2) > div').append('<button onclick=apagar('+result.posts[i].cod+') class="btn btn-danger">Apagar<button/>');
           $('.posts > div:nth-child('+a+') > div:nth-child(2)').text(result.posts[i].descricao);
         }
@@ -95,7 +95,7 @@ function Post(){
       data: formData
     }).done(function(result){
       if (!result.erro) {
-        mensagem("alert-success", 'Post cadastrado com sucesso!!', 2500);
+        mensagem("alert-success", result.mensagem, 2500);
         $('#imagem, #titulo, #descricao').val("");
       }
       else {
@@ -116,6 +116,24 @@ function Post(){
       }
       else {
         mensagem("alert-danger", result.mensagem, 2500);
+      }
+    });
+  }
+
+  this.editar = function(post){
+    $.ajax({
+      method:'GET',
+      url: 'src/php/post/editar.php?'+post
+    }).done(function(result){
+      if (result.error) {
+        window.location.href = "./";
+      }
+      else {
+        var img = result.post[0]['nome']? 'src/img/uploads/'+result.post[0]['nome'] : 'src/img/user.png';
+
+        $('#imagemAtual').attr('src', img);
+        $('#titulo').val(result.post[0]['titulo']);
+        $('#descricao').val(result.post[0]['descricao']);
       }
     });
   }

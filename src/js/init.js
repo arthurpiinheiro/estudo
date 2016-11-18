@@ -7,7 +7,9 @@ var formInserirPost = $('#inserirPost');
 var url = [
   '/estudo/',
   '/estudo/index.html',
-  '/estudo/inserir.html'
+  '/estudo/inserir.html',
+  '/estudo/editar.html',
+  '/estudo/editar',
 ];
 
 (function($){
@@ -30,6 +32,11 @@ var url = [
       post.listar();
     }
 
+    if (pathname == url[3] || pathname == url[4]) {
+      var endereco = window.location.href.split('?');
+      post.editar(endereco[1]);
+    }
+
     $('.sair').click(function(){
       usuario.logout();
     });
@@ -38,8 +45,11 @@ var url = [
 })(jQuery);
 
 function editar(valor){
+  post.editar()
 }
 
 function apagar(valor){
-  post.apagar(valor);
+  if (confirm('Tem certeza que deseja apagar esta publicação?')) {
+    post.apagar(valor);
+  }
 }

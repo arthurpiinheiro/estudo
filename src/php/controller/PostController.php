@@ -80,5 +80,13 @@
       public function retornoApagarPublicacao(){
         return $this->apagarPublicacao();
       }
+
+      protected function listaPublicacao(){
+        return $this->bdEditar($this->getCodPost());
+      }
+
+      public function retornoListaPublicacao(){
+        return $this->listaPublicacao();
+      }
 	}
  ?>
