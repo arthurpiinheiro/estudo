@@ -33,5 +33,21 @@
        $insert->execute();
        return $insert->fetchAll();
      }
+
+    protected function bdAtualizar($titulo, $descricao, $data, $codigo){
+      $sqlPost = "UPDATE `post` SET `titulo` = '".$titulo."', `descricao` = '".$descricao."', `data` = '".$data."' WHERE  `post`.`cod` = '".$codigo."' ";
+      $updatePost = $this->prepare($sqlPost);
+      $updatePost->execute();
+    }
+
+    protected function bdAtualizarImagem($imagem, $codigo){
+      $sqlImagem = "DELETE FROM `imagem` WHERE `imagem`.`codPost` = '".$codigo."'";
+      $updatePost = $this->prepare($sqlPost);
+      $updatePost->execute();
+
+      $sqlImagem = "INSERT INTO `imagem`(`nome`, `codPost`) VALUES ('".$imagem."','".$codigo."')";
+      $insertImagem = $this->prepare($sqlImagem);
+      return $insertImagem->execute();
+    }
 	}
  ?>

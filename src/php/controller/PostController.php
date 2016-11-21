@@ -88,5 +88,13 @@
       public function retornoListaPublicacao(){
         return $this->listaPublicacao();
       }
+
+      protected function atualizarPublicacao(){
+        return $this->bdAtualizar($this->getTitulo(), $this->getDescricao(), $this->getData(), $this->getCodPost());
+      }
+
+      public function retornoAtualizarPublicacao(){
+        return $this->atualizarPublicacao();
+      }
 	}
  ?>

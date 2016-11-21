@@ -71,7 +71,7 @@ function Post(){
           $('.posts > div:nth-child('+a+') > div.panel-heading').append('<div/>');
           $('.posts > div:nth-child('+a+') > div.panel-heading > div').addClass('row');
           $('.posts > div:nth-child('+a+') > div.panel-heading > div.row').append('<div/> <div/>');
-          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div').addClass('col-lg-6 col-md-6');
+          $('.posts > div:nth-child('+a+') > div.panel-heading > div > div').addClass('col-lg-6 col-md-6 col-sm-6 col-xs-6');
           $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(1)').text(result.posts[i].titulo);
           $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2)').append('<div/>');
           $('.posts > div:nth-child('+a+') > div.panel-heading > div > div:nth-child(2) > div').addClass('text-right');
@@ -130,11 +130,33 @@ function Post(){
       }
       else {
         var img = result.post[0]['nome']? 'src/img/uploads/'+result.post[0]['nome'] : 'src/img/user.png';
-
         $('#imagemAtual').attr('src', img);
         $('#titulo').val(result.post[0]['titulo']);
+        $('#codPost').val(result.post[0]['codPost']);
         $('#descricao').val(result.post[0]['descricao']);
       }
+    });
+  }
+
+  this.atualizar = function(form){
+    form.preventDefault();
+    var formData = new FormData($("#atualizarPost")[0]);
+
+    $.ajax({
+      method:'POST',
+      url: 'src/php/post/atualizar.php',
+      processData: false,
+      contentType: false,
+      data: formData
+    }).done(function(result){
+      // if (!result.erro) {
+      //   mensagem("alert-success", result.mensagem, 2500);
+      //   $('#imagem, #titulo, #descricao').val("");
+      // }
+      // else {
+      //   mensagem("alert-danger", result.mensagem, 2500);
+      // }
+      console.log(result);
     });
   }
 }
