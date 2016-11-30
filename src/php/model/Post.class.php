@@ -4,7 +4,7 @@
 	class Post extends Conexao{
 
      protected function bdListar(){
-       $sql = "SELECT * FROM post order by cod asc";
+       $sql = "SELECT * FROM post order by cod desc";
        $insert = $this->prepare($sql);
        $insert->execute();
        return $insert->fetchAll();
@@ -13,12 +13,13 @@
      protected function bdInserir($titulo, $descricao, $data, $codUsuario, $imagem){
        $sqlPost = "INSERT INTO `post`(`titulo`, `descricao`, `data`, `codUsuario`) VALUES ('".$titulo."','".$descricao."','".$data."','".$codUsuario."')";
        $insertPost = $this->prepare($sqlPost);
-       $insertPost->execute();
+       $retornoPost = $insertPost->execute();
        $codigo = $this->lastInsertId();
 
        $sqlImagem = "INSERT INTO `imagem`(`nome`, `codPost`) VALUES ('".$imagem."','".$codigo."')";
        $insertImagem = $this->prepare($sqlImagem);
-       return $insertImagem->execute();
+			 $retornoImg = $insertImagem->execute();
+			 return ($retornoPost || $retornoImg)? true : false;
      }
 
      protected function bdApagar($cod){
@@ -37,17 +38,13 @@
     protected function bdAtualizar($titulo, $descricao, $data, $codigo){
       $sqlPost = "UPDATE `post` SET `titulo` = '".$titulo."', `descricao` = '".$descricao."', `data` = '".$data."' WHERE  `post`.`cod` = '".$codigo."' ";
       $updatePost = $this->prepare($sqlPost);
-      $updatePost->execute();
+      return $updatePost->execute();
     }
 
     protected function bdAtualizarImagem($imagem, $codigo){
-      $sqlImagem = "DELETE FROM `imagem` WHERE `imagem`.`codPost` = '".$codigo."'";
+      $sqlImagem = "UPDATE `imagem` SET `nome`='".$imagem."' WHERE `imagem`.`codPost` = '".$codigo."'";
       $updatePost = $this->prepare($sqlPost);
-      $updatePost->execute();
-
-      $sqlImagem = "INSERT INTO `imagem`(`nome`, `codPost`) VALUES ('".$imagem."','".$codigo."')";
-      $insertImagem = $this->prepare($sqlImagem);
-      return $insertImagem->execute();
+      return $updatePost->execute();
     }
 	}
  ?>

@@ -96,5 +96,13 @@
       public function retornoAtualizarPublicacao(){
         return $this->atualizarPublicacao();
       }
+
+			protected function atualizarImagem(){
+				return $this->bdAtualizarImagem($this->getImagem(), $this->getCodPost());
+			}
+
+			public function retornoAtualizarImagem(){
+				return $this->atualizarImagem();
+			}
 	}
  ?>

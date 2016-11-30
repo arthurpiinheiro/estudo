@@ -28,10 +28,26 @@
 }
 .edit-photo > div{
   width: 150px;
+	position: relative;
 }
 
 .edit-photo > div > img{
   width: 100%;
+}
+
+.icon-loading{
+	width: 40px;
+}
+
+.loadingUpload{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .edit-photo > label{
@@ -81,4 +97,9 @@
 .imgLightbox{
   display: none;
   width: 70%;
+}
+
+.imgLightbox > img{
+	object-fit: cover;
+	
 }

@@ -1,7 +1,7 @@
 <?php
   header("Content-type: application/json");
   session_start();
-  if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_SESSION['codigo']) && isset($_SESSION['email'])){
+  if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id']) && isset($_SESSION['codigo']) && isset($_SESSION['email'])){
     $codigo = $_GET['id'];
     include_once "../autoload.php";
     $post = new PostController();
@@ -16,6 +16,6 @@
     }
   }
   else{
-    die("Acesso Negado");
+    echo json_encode(['error' => true]);
   }
 ?>

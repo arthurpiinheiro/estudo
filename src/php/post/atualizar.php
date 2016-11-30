@@ -7,51 +7,18 @@
     $descricao = trim(strip_tags(addslashes(filter_input(INPUT_POST, 'descricao'))));
     $data = date("Y-m-d H:s:i");
     $codUsuario = $_SESSION['codigo'];
-    $statusImagem = false ;
-    //
-    // if ($_FILES['imagem']['size'] <= 0) {
-    //   $statusImagem = true;
-    //
-    //   $dir = "./../../img/uploads/";
-    //   $imagem = $_FILES['imagem'];
-    //   $extensao = end(explode('.', $imagem['name']));
-    //   $nomeImagem = md5(date("Y-m-d H:s:i").$_SERVER['REMOTE_ADDR']).".".$extensao;
-    //   $tamanho = $imagem['size'];
-    //   $extensoes = ['jpg', 'png', 'jpeg'];
-    //   $tamanhoMaximo = 1024 * 1024 * 1.8;
-    // }
-    //
-    // if ($statusImagem){
-    //   echo json_encode(['erro' => true, 'mensagem' => 'Envie uma imagem']);
-    // }
-    // elseif (!in_array($extensao, $extensoes)) {
-    //   echo json_encode(['erro' => true, 'mensagem' => 'Só é permitido imagens com as seguintes extensões: JPG, JPEG, PNG.']);
-    // }
-    // elseif($imagem['size'] > $tamanhoMaximo){
-    //   echo json_encode(['erro' => true, 'mensagem' => 'Só é permitido imagens de até 2M']);
-    // }
-    // else{
-    //   include_once "../autoload.php";
-    //   $post = new PostController();
-    //   $post->setTitulo($titulo);
-    //   $post->setDescricao($descricao);
-    //   $post->setData($data);
-    //   $post->setCodPost($codPost);
-    //   $post->setImagem($nomeImagem);
-    //   $result = $post->retornoAtualizarPublicacao();
-    //
-    //   if ($result) {
-    //     if (move_uploaded_file($imagem['tmp_name'], $dir.$nomeImagem)){
-    //       echo json_encode(['erro' => false, 'mensagem' => 'Post Atualizado com sucesso!!']);
-    //     }
-    //     else{
-    //       echo json_encode(['erro' => true, 'mensagem' => 'Erro ao mover a imagem para o servidor.']);
-    //     }
-    //   }
-    //   else {
-    //     echo json_encode(['erro' => true, 'mensagem' => 'Erro ao Atualizar a imagem no Banco de dados.']);
-    //   }
-    // }
+
+    include_once "../autoload.php";
+    $post = new PostController();
+    $post->setTitulo($titulo);
+    $post->setDescricao($descricao);
+    $post->setData($data);
+    $post->setCodPost($codPost);
+    $resultPost = $post->retornoAtualizarPublicacao();
+
+    if ($resultPost) {
+      echo json_encode(['erro' => false, 'mensagem' => 'Post Atualizado com sucesso']);
+    }
   }
   else{
     die("Acesso Negado.");

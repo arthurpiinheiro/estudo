@@ -49,10 +49,6 @@ var url = [
 	});
 })(jQuery);
 
-function editar(valor){
-  post.editar()
-}
-
 function apagar(valor){
   if (confirm('Tem certeza que deseja apagar esta publicação?')) {
     post.apagar(valor);

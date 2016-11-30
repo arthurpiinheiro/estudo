@@ -4,7 +4,7 @@
   if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['email']) && !empty($_POST['senha'])) {
 
     $email = trim(strip_tags(addslashes(filter_input(INPUT_POST, 'email'))));
-    $senha = trim(strip_tags(addslashes(filter_input(INPUT_POST, 'senha'))));
+    $senha = base64_encode(trim(strip_tags(addslashes(filter_input(INPUT_POST, 'senha')))));
 
     include_once "../autoload.php";
     $user = new UserController();

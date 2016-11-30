@@ -145,25 +145,42 @@ function Post(){
     $.ajax({
       method:'POST',
       url: 'src/php/post/atualizar.php',
+      data: formData
+    }).done(function(result){
+      if (!result.erro) {
+        mensagem("alert-success", result.mensagem, 2500);
+      }
+      else {
+        mensagem("alert-danger", result.mensagem, 2500);
+      }
+    });
+  }
+
+  this.atualizarImagem = function(form){
+    form.preventDefault();
+    var formData = new FormData($("#atualizarPost")[0]);
+
+    $.ajax({
+      method:'POST',
+      url: 'src/php/post/atualizarImagem.php',
       processData: false,
       contentType: false,
       data: formData
     }).done(function(result){
-      // if (!result.erro) {
-      //   mensagem("alert-success", result.mensagem, 2500);
-      //   $('#imagem, #titulo, #descricao').val("");
-      // }
-      // else {
-      //   mensagem("alert-danger", result.mensagem, 2500);
-      // }
-      console.log(result);
+      if (!result.erro) {
+        mensagem("alert-success", result.mensagem, 2500);
+      }
+      else {
+        mensagem("alert-danger", result.mensagem, 2500);
+      }
     });
   }
 }
 
 function mensagem(classe, mensagem, tempo){
   $('#mensagem').addClass(classe);
-  $("#mensagem, .navMensagem").fadeIn();
+  $("#mensagem").fadeIn();
+  $(".navMensagem").fadeIn();
   $('#mensagem > strong, #mensagem > div > div > strong').text(mensagem);
 
   setTimeout(function(){
