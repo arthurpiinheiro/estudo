@@ -53,7 +53,7 @@ function Post(){
   this.listar = function(){
     $.ajax({
       method:'GET',
-      url: 'src/php/post/listar.php'
+      url: 'src/php/post/list.php'
     }).done(function(result){
       if (!result.posts) {
         $('.posts').append('<div/>').addClass('text-center').text('Você não possui publicações');
@@ -89,7 +89,7 @@ function Post(){
 
     $.ajax({
       method:'POST',
-      url: 'src/php/post/inserir.php',
+      url: 'src/php/post/insert.php',
       processData: false,
       contentType: false,
       data: formData
@@ -107,7 +107,7 @@ function Post(){
   this.apagar = function(cod){
     $.ajax({
       method:'POST',
-      url: 'src/php/post/apagar.php',
+      url: 'src/php/post/delete.php',
       data: 'codigo='+cod
     }).done(function(result){
       if (!result.erro) {
