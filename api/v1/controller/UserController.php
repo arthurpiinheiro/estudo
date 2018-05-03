@@ -68,7 +68,7 @@ class UserController
     private function login()
     {
         $response = array('message' => '', 'success' => false, 'data' => null);
-        $data = array('email' => $this->getEmail(), 'password' => $this->getPassword());
+        $data = array('email' => $this->getEmail(), 'password' => $this->getPassword(), 'token' => $this->getToken());
         $result = $this->modelUser->returnLoginDb($data);
 
         if ($result) {
@@ -95,10 +95,9 @@ class UserController
 
     private function logout()
     {
-        session_start();
         $response = array('message' => '', 'success' => false);
 
-        if ($_SESSION['currentUser']) {
+        if (isset($_SESSION['currentUser'])) {
             session_unset();
             session_destroy();
             $response['success'] = true;
@@ -118,9 +117,8 @@ class UserController
         session_start();
         $response = array('message' => '', 'success' => false);
 
-        if ($_SESSION['currentUser']) {
+        if (isset($_SESSION['currentUser']) && $_SESSION['currentUser']['token'] === $this->getToken()) {
 
-            $this->setToken($_SESSION['currentUser']->{'token'});
             $response['success'] = !!$this->modelUser->returnIsLoggedInBd($this->getToken());
 
         } else {

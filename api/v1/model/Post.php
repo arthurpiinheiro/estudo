@@ -44,9 +44,9 @@ class Post
             $stmpImage->bindValue(':nameImage', $data['image']);
             $stmpImage->bindValue(':codPost', $this->modelConnection->lastInsertId());
             if ($stmpImage->execute()) {
-                $response['message'] = 'Erro ao cadastrar imagem';
-            } else {
                 $response['success'] = true;
+            } else {
+                $response['message'] = 'Erro ao cadastrar imagem';
             }
         } else {
             $response['message'] = 'Erro ao cadastrar post';

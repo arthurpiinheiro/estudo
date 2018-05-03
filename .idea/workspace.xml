@@ -2,32 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5aed0fc-a856-4c7a-8bbc-f0d5a95f48fc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/estudo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/model/Conexao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/uploads/1c6e2f37ad1f016660c818646f6cf99c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/10322ee12b84a705674d476145b22aa9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/2e5ced07f6dd10fb018030e94572e08b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/33abeb5b9da3b2b1b530a85423caa84a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/368600f6fe42ec0006cbfa3a64e3bdb0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/4c65ddd6eb246b6e7790bfd590fee078.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/52e82c6879e1122aac097cc5ccd06a81.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/8bb363bb10319dd582c140d3959b9ed7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/91f9464f14c245a0f779f4a95d58fe05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/b7e8bce63b6db13fbd524ed8acf8c973.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/b8d0c3dd5fa2c15ac1f2078b0a507d45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/cad6b88beca3b36225fca69e6037b1b8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/d112921e22455de5c734e09c77dfeee6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/uploads/fa07125e25b7402299ce72aae7e56745.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/controller/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/model/Conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/model/Connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/model/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/model/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/view/post/atualizar.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/view/post/atualizar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/view/post/atualizarImagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/view/post/atualizarImagem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/view/post/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/view/post/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/view/post/editar.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/view/post/editar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/view/post/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/view/post/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/view/post/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/view/post/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/view/user/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/view/user/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/view/user/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/view/user/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/view/user/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/view/user/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inserir.html" beforeDir="false" afterPath="$PROJECT_DIR$/inserir.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/estilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/estilo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/init.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/autoload.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/controller/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/model/Conexao.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/model/Post.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/model/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/model/User.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/post/apagar.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/view/post/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/post/atualizar.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/view/post/atualizar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/post/atualizarImagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/view/post/atualizarImagem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/post/editar.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/view/post/editar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/post/inserir.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/view/post/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/post/listar.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/view/post/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/user/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/view/user/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/user/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/view/user/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/php/user/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/view/user/session.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,6 +45,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="estudo" />
   </component>
   <component name="FileEditorManager">
     <leaf />
@@ -44,6 +57,16 @@
       <find>profpic</find>
       <find>apagar</find>
       <find>returnInsertPostBd</find>
+      <find>enau</find>
+      <find>formLogin</find>
+      <find>index</find>
+      <find>in</find>
+      <find>imagem</find>
+      <find>in_array</find>
+      <find>token</find>
+      <find>data</find>
+      <find>val(</find>
+      <find>.token</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -56,12 +79,9 @@
         <option value="$PROJECT_DIR$/src/php/user/login.php" />
         <option value="$PROJECT_DIR$/src/php/post/inserir.php" />
         <option value="$PROJECT_DIR$/src/php/autoload.php" />
-        <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/api/user/login.php" />
         <option value="$PROJECT_DIR$/api/index.php" />
-        <option value="$PROJECT_DIR$/api/autoload.php" />
         <option value="$PROJECT_DIR$/api/model/Conexao.php" />
-        <option value="$PROJECT_DIR$/api/model/User.php" />
         <option value="$PROJECT_DIR$/api/controller/UserController.php" />
         <option value="$PROJECT_DIR$/api/view/post/inserir.php" />
         <option value="$PROJECT_DIR$/api/model/Post.php" />
@@ -72,7 +92,23 @@
         <option value="$PROJECT_DIR$/api/view/user/session.php" />
         <option value="$PROJECT_DIR$/api/controller/PostController.php" />
         <option value="$PROJECT_DIR$/api/view/user/login.php" />
+        <option value="$PROJECT_DIR$/api/model/User.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/api/autoload.php" />
+        <option value="$PROJECT_DIR$/api/v1/autoload.php" />
+        <option value="$PROJECT_DIR$/api/v1/view/user/login.php" />
+        <option value="$PROJECT_DIR$/api/v1/view/user/session.php" />
+        <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/api/v1/model/User.php" />
+        <option value="$PROJECT_DIR$/api/v1/controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/css/estilo.css" />
         <option value="$PROJECT_DIR$/src/js/init.js" />
+        <option value="$PROJECT_DIR$/api/v1/view/post/insert.php" />
+        <option value="$PROJECT_DIR$/inserir.html" />
+        <option value="$PROJECT_DIR$/src/js/services.js" />
+        <option value="$PROJECT_DIR$/api/v1/controller/PostController.php" />
+        <option value="$PROJECT_DIR$/api/v1/model/Post.php" />
       </list>
     </option>
   </component>
@@ -95,6 +131,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -102,21 +139,10 @@
               <item name="estudo" type="b2602c69:ProjectViewProjectNode" />
               <item name="estudo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="estudo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="estudo" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="estudo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="estudo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -127,6 +153,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/v1" />
       <recent name="$PROJECT_DIR$/api/view" />
       <recent name="$PROJECT_DIR$/api" />
     </key>
@@ -156,35 +183,36 @@
       <workItem from="1524721981297" duration="2457000" />
       <workItem from="1524728528028" duration="10309000" />
       <workItem from="1524848505954" duration="497000" />
+      <workItem from="1525301076408" duration="14040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13263000" />
+    <option name="totallyTimeSpent" value="27303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1097" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49951124" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" sideWeight="0.50048876" side_tool="true" visible="true" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32942328" />
-      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,13 +222,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sql/blog.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="10" column="20" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.Trash/solarized/iterm2-colors-solarized/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -211,34 +232,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/model/Conexao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../var/mysql/Mac-mini-de-Arthur.local.err">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -246,109 +239,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/index.php" />
-    <entry file="file://$PROJECT_DIR$/api/view/post/atualizar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/view/post/atualizarImagem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/view/post/delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/view/post/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/view/user/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/view/user/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/model/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/controller/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/view/post/insert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/view/user/login.php">
+    <entry file="file://$PROJECT_DIR$/api/v1/view/post/atualizar.php" />
+    <entry file="file://$PROJECT_DIR$/api/v1/view/post/atualizarImagem.php" />
+    <entry file="file://$PROJECT_DIR$/api/v1/view/post/delete.php" />
+    <entry file="file://$PROJECT_DIR$/api/v1/model/Connection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/controller/UserController.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+        <state relative-caret-position="30">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/blog.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/view/user/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="100" column="28" lean-forward="true" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/view/user/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-708">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="270">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding>
+            <element signature="e#50#625#0" />
+            <element signature="e#923#1126#0" />
+            <element signature="e#1173#3186#0" />
+            <element signature="e#3742#4090#0" />
+            <element signature="e#4122#4647#0" />
+            <element signature="e#4682#5076#0" />
+            <element signature="e#5117#5569#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/view/user/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inserir.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/view/post/list.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/model/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/controller/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="207" column="47" lean-forward="true" selection-start-line="207" selection-start-column="47" selection-end-line="207" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/view/post/insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
         </state>
       </provider>
     </entry>

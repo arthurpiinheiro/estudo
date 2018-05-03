@@ -1,104 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="utf-8" />
-	<title>Inserir</title>
-	<link rel="stylesheet" href="src/css/bootstrap/bootstrap.min.css" />
-	<link rel="stylesheet" href="src/css/bootstrap/bootstrap-theme.min.css" />
-	<link rel="stylesheet" type="text/css" href="src/css/estilo.css" />
+    <meta charset="utf-8"/>
+    <title>Inserir</title>
+    <link rel="stylesheet" href="src/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="src/css/bootstrap/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="src/css/estilo.css"/>
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="#">Blog</a>
-		    </div>
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Blog</a>
+            </div>
 
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		        <li><a href="./">Publicações <span class="sr-only">(current)</span></a></li>
-		        <li class="active"><a href="#">Inserir <span class="sr-only">(current)</span></a></li>
-		      </ul>
-  		      <ul class="nav navbar-nav navbar-right">
-		        <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Arthur <span class="caret"></span></a>
-		          <ul class="dropdown-menu">
-		            <li><a href="#">Perfil</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="#" class="sair">Sair</a></li>
-		          </ul>
-		        </li>
-		      </ul>
-		    </div>
-		  </div>
-		</nav>
-	</header>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="./">Publicações <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="#">Inserir <span class="sr-only">(current)</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Arthur <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Perfil</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" class="sair">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
-	<div class="container">
-		<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
-			<h3 class="page-header text-center">Escrever Publicação</h3>
-			<form id="inserirPost" enctype="multipart/form-data">
-				<div class="form-group">
-					<div class="row">
-						<div class="col-lg-12">
-							<label for="imagem">Imagem</label>
-						</div>
-						<div class="col-lg-12">
-              <label for="imagem" class="btn btn-default">Imagem</label>
-							<input type="file" id="imagem" name="imagem"  class="hidden"/>
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="form-group">
-								<label for="titulo">Titulo</label>
-								<input type="text" id="titulo" name="titulo" class="form-control" required=""/>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="form-group">
-								<label for="descricao">Descrição</label>
-								<textarea id="descricao" name="descricao" class="form-control" required=""></textarea>
-							</div>
-						</div>
-					</div>
-				</div>
+<div class="container">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+        <h3 class="page-header text-center">Escrever Publicação</h3>
+        <form id="inserirPost" enctype="multipart/form-data">
+            <input type="hidden" value="" class="token" name="token">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label for="image">Imagem</label>
+                    </div>
+                    <div class="col-lg-12">
+                        <label for="image" class="btn btn-default">Imagem</label>
+                        <input type="file" id="image" name="image" class="hidden"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label for="title">Titulo</label>
+                            <input type="text" id="title" name="title" class="form-control" required=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label for="description">Descrição</label>
+                            <textarea id="description" name="description" class="form-control" required=""></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-				<div class="form-group">
-					<div class="row">
-						<div class="col-lg-12 text-right">
-							<div class="form-group">
-                <input type="reset" class="btn btn-default" value="Limpar">
-                <input type="submit" class="btn btn-success" value="Enviar">
-							</div>
-						</div>
-					</div>
-				</div>
-			</form>
-      <div id="mensagem" class="alert  alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong></strong>
-      </div>
-		</div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-12 text-right">
+                        <div class="form-group">
+                            <input type="reset" class="btn btn-default" value="Limpar">
+                            <input type="submit" class="btn btn-success" value="Enviar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="mensagem" class="alert  alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+            <strong></strong>
+        </div>
+    </div>
 
-	</div>
+</div>
 
-	<script src="src/js/jquery/jquery-1.11.0.min.js"></script>
-	<script src="src/js/bootstrap/bootstrap.min.js"></script>
-	<script src="src/js/services.js"></script>
-  <script src="src/js/init.js"></script>
+<script src="src/js/jquery/jquery-1.11.0.min.js"></script>
+<script src="src/js/bootstrap/bootstrap.min.js"></script>
+<script src="src/js/services.js"></script>
+<script src="src/js/init.js"></script>
 </body>
 </html>

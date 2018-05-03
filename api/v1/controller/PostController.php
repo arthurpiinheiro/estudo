@@ -153,20 +153,20 @@ class PostController
 
     private function moveImage($image)
     {
-        $response = array('message' => '', 'success' => false, 'data' => '');
-        $dir = "./../../../img/uploads/";
+        $response = array('message' => '', 'success' => false, 'data' => null);
+        $dir = $_SERVER['DOCUMENT_ROOT'] . "/estudo/src/img/uploads/";
         $extension = explode('.', $image['name']);
         $extension = end($extension);
         $nameImage = md5(date("Y-m-d H:s:i") . $_SERVER['REMOTE_ADDR']) . "." . $extension;
         $size = $image['size'];
-        $extensions = ['jpg', 'png', 'jpeg'];
+        $extensions = array('jpg', 'png', 'jpeg');
         $maxSize = 1024 * 1024 * 1.8;
 
         if ($image['size'] <= 0) {
             $response['message'] = 'Envie uma imagem.';
             $response['success'] = false;
 
-        } elseif (in_array($extension, $extensions)) {
+        } elseif (!in_array($extension, $extensions)) {
             $response['message'] = 'Só é permitido imagens com as seguintes extensões: JPG, JPEG, PNG.';
             $response['success'] = false;
 
@@ -190,8 +190,8 @@ class PostController
         session_start();
         $response = array('message' => '', 'success' => false);
 
-        if ($_SESSION['currentUser']->{'token'} === $this->getToken()) {
-            $this->setCodUser($_SESSION['currentUser']->{'cod'});
+        if ($_SESSION['currentUser']['token'] === $this->getToken()) {
+            $this->setCodUser($_SESSION['currentUser']['cod']);
             $resultImage = $this->moveImage($this->getImage());
 
             if (!$resultImage['success']) {

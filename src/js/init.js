@@ -1,46 +1,50 @@
-var usuario = new Usuario();
-var post = new Post();
-var pathname = $(location).attr('pathname');
-var formLogin = $('#formLogin');
-var formInserirPost = $('#inserirPost');
-var formAtualizarPost = $('#atualizarPost');
-var url = [
-    '/estudo/',
-    '/estudo/index',
-    '/estudo/inserir',
-    '/estudo/editar',
-    '/estudo/index.html',
+const user = new User();
+const post = new Post();
+const pathname = $(location).attr('pathname');
+const formLogin = $('#formLogin');
+const formInserirPost = $('#inserirPost');
+const formAtualizarPost = $('#atualizarPost');
+const url = [
+    '/estudo/editar.html',
     '/estudo/inserir.html',
     '/estudo/editar.html',
+    '/estudo/login.html',
+    '/estudo/index.html',
+    '/estudo/',
 ];
 
 
 formLogin.submit(function (els) {
-    usuario.login(els);
+    user.login(els);
 });
 
 formInserirPost.submit(function (els) {
-    post.inserir(els);
+    post.insert(els);
 });
 
 formAtualizarPost.submit(function (els) {
     post.atualizar(els);
 });
 
-for (var i = 0; i < url.length; i++) {
-    if (pathname === url[i]) {
-        // usuario.sessao();
+
+routes();
+
+function routes() {
+    for (let i = 0; i < url.length; i++) {
+        if (pathname === url[i]) {
+            user.session();
+        }
+    }
+    if (pathname === '/estudo/index.html' || pathname === '/estudo/') {
+        post.list();
     }
 }
 
-if (pathname === url[0] || pathname === url[1]) {
-    // post.listar();
-}
 
-if (pathname === url[3] || pathname === url[4]) {
-    var endereco = window.location.href.split('?');
-    // post.editar(endereco[1]);
-}
+// if (pathname === url[3] || pathname === url[4]) {
+//     let endereco = window.location.href.split('?');
+//     // post.editar(endereco[1]);
+// }
 
 $('.sair').click(function () {
     // usuario.logout();

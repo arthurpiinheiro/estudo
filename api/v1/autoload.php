@@ -1,5 +1,6 @@
 <?php
 
+
 define('BASE_PATH', realpath(dirname(__FILE__)));
 
 function my_autoloader($class)
