@@ -1,0 +1,16 @@
+<?php
+
+//$date_time = new \DateTime('2016-08-15');
+
+// P - Periodo
+// D - Dia
+// M - Mes
+// Y - Ano
+
+//$date_time->add(new \DateInterval(''));
+
+//$date_time->sub(new \DateInterval(''));
+
+//var_dump($date_time->format("d-m-Y"));
+
+//var_dump($date_time <= new \DateTime);
